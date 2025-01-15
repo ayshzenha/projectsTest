@@ -3,11 +3,14 @@ let recognition;
 
 
 function startConverting() {
-    if ('webkitSpeechRecognition ' in window) {
-        recognition = new webkitSpeechRecognition
-        setupRecognition(recognition)
-        recognition.start()
-    }
+ if ('webkitSpeechRecognition' in window) {
+    recognition = new webkitSpeechRecognition();
+    setupRecognition(recognition);
+    recognition.start();
+} else {
+    alert("Speech Recognition is not supported in this browser.");
+}
+
 
 }
 function setupRecognition(recognition) {
@@ -53,5 +56,8 @@ function processResult(results) {
 
 
 function stopConverting() {
-    recognition.stop();
+    if (recognition) {
+        recognition.stop();
+    }
 }
+
