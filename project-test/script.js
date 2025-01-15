@@ -1,37 +1,37 @@
-const resultElement = document.getElementById("result")
+const resultElement = document.getElementById("result");
 let recognition;
 
-
 function startConverting() {
- if ('webkitSpeechRecognition' in window) {
-    recognition = new webkitSpeechRecognition();
-    setupRecognition(recognition);
-    recognition.start();
-} else {
-    alert("Speech Recognition is not supported in this browser.");
+    if ('webkitSpeechRecognition' in window) {
+        recognition = new webkitSpeechRecognition();
+        setupRecognition(recognition);
+        recognition.start();
+    } else {
+        alert("Speech Recognition is not supported in this browser.");
+    }
 }
 
-
-}
 function setupRecognition(recognition) {
     recognition.continuous = true;
-
     recognition.interimResults = true;
-    //listening the speech,convert in to the text,display in the screen
-
     recognition.lang = "en-US";
 
     recognition.onresult = function (event) {
-
         const { finalTranscript, interTranscript } = processResult(event.results);
-        //upcoming text going to be process by this function
-
         resultElement.innerHTML = finalTranscript + interTranscript;
-    }
+    };
 
+    recognition.onerror = function(event) {
+        console.error("Speech Recognition error: ", event.error);
+        alert("There was an error with the speech recognition. Please try again.");
+    };
+
+    recognition.onend = function() {
+        console.log("Speech recognition service has stopped.");
+    };
 }
-function processResult(results) {
 
+function processResult(results) {
     let finalTranscript = '';
     let interTranscript = '';
 
@@ -46,18 +46,10 @@ function processResult(results) {
         }
     }
     return { finalTranscript, interTranscript };
-    
-
 }
-
-
-
-
-
 
 function stopConverting() {
     if (recognition) {
         recognition.stop();
     }
 }
-
