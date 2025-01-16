@@ -110,16 +110,6 @@ button:focus {
     outline: none;
 }
 
-/* Pulse Animation (Optional) */
-@keyframes pulse {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
-    }
-}
-
 /* Footer Styling */
 .footer {
     position: absolute;
@@ -128,6 +118,9 @@ button:focus {
     text-align: center;
     font-size: 14px;
     color: #dfe6e9; /* Light gray text for footer */
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent footer background */
+    border-radius: 0 0 15px 15px; /* Round the bottom corners */
 }
 
 /* ---------------------- Responsive Design ---------------------- */
