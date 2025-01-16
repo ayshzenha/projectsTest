@@ -118,3 +118,65 @@ button:focus {
         transform: scale(1.1);
     }
 }
+
+/* ---------------------- Responsive Design ---------------------- */
+
+/* For smaller devices (max-width 600px) */
+@media (max-width: 600px) {
+    body {
+        background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    }
+
+    .container {
+        width: 90%; /* 90% width on small screens */
+        height: auto; /* Allow height to auto adjust */
+        padding: 20px; /* Reduce padding */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller font size for the title */
+        margin-bottom: 20px;
+    }
+
+    #result {
+        height: auto; /* Allow the result box to grow with content */
+    }
+
+    button {
+        font-size: 18px; /* Smaller buttons on small screens */
+        height: 70px;
+        width: 70px;
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 15px; /* Reduced gap between buttons */
+    }
+}
+
+/* For even smaller screens (max-width 400px) */
+@media (max-width: 400px) {
+    .container {
+        width: 90%; /* Further reduce the container width */
+        padding: 15px; /* Reduce padding even more */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Even smaller title font */
+        margin-bottom: 15px;
+    }
+
+    #result {
+        height: auto; /* Allow the result box to grow */
+    }
+
+    button {
+        font-size: 16px; /* Smaller button text */
+        height: 60px;
+        width: 60px;
+    }
+
+    .button-container {
+        gap: 10px; /* Minimal gap for very small screens */
+    }
+}
