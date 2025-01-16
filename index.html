@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>speech to text</title>
+    <title>Speech to Text Converter</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h2>speech to text converter</h2>
-<div id="result"></div>
-<div class="button-container">
-<button onclick="startConverting()">
-    <i class="fa fa-microphone"></i>
-</button>
-<button onclick="stopConverting()">
-    <i class="fa fa-stop"></i>
-</button>
-</div>
-
+        <h2>Speech to Text Converter</h2>
+        <div id="result"></div>
+        <div class="button-container">
+            <button onclick="startConverting()">
+                <i class="fa fa-microphone"></i> Start
+            </button>
+            <button onclick="stopConverting()">
+                <i class="fa fa-stop"></i> Stop
+            </button>
+            <button onclick="copyToClipboard()">
+                <i class="fa fa-clipboard"></i> Copy
+            </button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
