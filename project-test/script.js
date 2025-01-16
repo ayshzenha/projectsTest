@@ -7,14 +7,14 @@ function startConverting() {
         setupRecognition(recognition);
         recognition.start();
     } else {
-        alert("Speech Recognition is not supported in this browser.");
+        alert("التعرف على الصوت غير مدعوم في هذا المتصفح.");
     }
 }
 
 function setupRecognition(recognition) {
     recognition.continuous = true;
     recognition.interimResults = true;
-    recognition.lang = "en-US";
+    recognition.lang = "ar-SA"; // تغيير اللغة إلى العربية
 
     recognition.onresult = function (event) {
         const { finalTranscript, interTranscript } = processResult(event.results);
@@ -22,12 +22,12 @@ function setupRecognition(recognition) {
     };
 
     recognition.onerror = function(event) {
-        console.error("Speech Recognition error: ", event.error);
-        alert("There was an error with the speech recognition. Please try again.");
+        console.error("خطأ في التعرف على الصوت: ", event.error);
+        alert("حدث خطأ في التعرف على الصوت. يرجى المحاولة مرة أخرى.");
     };
 
     recognition.onend = function() {
-        console.log("Speech recognition service has stopped.");
+        console.log("خدمة التعرف على الصوت توقفت.");
     };
 }
 
