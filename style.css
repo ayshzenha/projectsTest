@@ -37,7 +37,7 @@ h2 {
     flex-direction: column;
     width: 400px;
     height: 500px;
-    background: #ffffff;
+    background: #2d3436; /* Dark background for the container */
     border-radius: 15px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -48,8 +48,8 @@ h2 {
 
 /* Result Box Styling */
 #result {
-    background: #f8f9fa; /* Light gray background for result */
-    color: #2c3e50; /* Darker text for readability */
+    background: #1e272e; /* Dark background for the result box */
+    color: #dfe6e9; /* Light gray text color for contrast */
     font-size: 16px;
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -57,10 +57,10 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 30px;
-    height: 200px; /* Defined height for box */
+    height: 200px; /* Defined height for the box */
     width: 100%;
-    border: 1px solid #ccc; /* Light border around the result */
-    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft inner shadow for depth */
+    border: 1px solid #636e72; /* Dark border for the result box */
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
 }
 
 /* Button Container Styling */
