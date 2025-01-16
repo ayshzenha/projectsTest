@@ -2,6 +2,9 @@ const resultElement = document.getElementById("result");
 let recognition;
 
 function startConverting() {
+    // Clear old result when starting new conversion
+    resultElement.innerHTML = '';
+
     if ('webkitSpeechRecognition' in window) {
         recognition = new webkitSpeechRecognition();
         setupRecognition(recognition);
@@ -59,6 +62,10 @@ function copyToClipboard() {
     if (text) {
         navigator.clipboard.writeText(text).then(() => {
             alert('تم نسخ النص إلى الحافظة!');
+            // Automatically close the alert after 2 seconds
+            setTimeout(() => {
+                alert(''); // Clear the alert
+            }, 2000);
         }).catch((err) => {
             alert('فشل في نسخ النص إلى الحافظة: ' + err);
         });
