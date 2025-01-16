@@ -48,18 +48,19 @@ h2 {
 
 /* Result Box Styling */
 #result {
-    background: #f2f4f7; /* Light off-white background for result box */
-    color: #2c3e50; /* Darker text color for better readability */
+    background: #f8f9fa; /* Light gray background for result */
+    color: #2c3e50; /* Darker text for readability */
     font-size: 16px;
     word-wrap: break-word;
     white-space: pre-wrap;
     overflow-y: auto;
-    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 30px;
-    height: 200px; /* Ensure there's a height for scrolling */
+    height: 200px; /* Defined height for box */
     width: 100%;
+    border: 1px solid #ccc; /* Light border around the result */
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft inner shadow for depth */
 }
 
 /* Button Container Styling */
